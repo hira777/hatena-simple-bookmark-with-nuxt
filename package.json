@@ -1,0 +1,38 @@
+{
+  "name": "hatena-simple-bookmark-with-nuxtjs",
+  "version": "1.0.0",
+  "description": "Hatena::SimpleBookmark with Nuxt.js",
+  "author": "soarflat",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/moment": "^1.0.0",
+    "bulma": "^0.7.1",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.22.2",
+    "node-sass": "^4.9.2",
+    "nuxt": "^1.4.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-vue": "^4.7.1",
+    "prettier": "^1.14.0",
+    "pug": "2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.1.0"
+  },
+  "license": "MIT"
+}
