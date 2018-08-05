@@ -34,9 +34,6 @@ export default {
     date() {
       return this.$moment(this.item.date).format('YYYY/MM/DD HH:mm');
     },
-    dom() {
-      return 'dom';
-    },
   },
 };
 </script>

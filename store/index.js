@@ -40,6 +40,13 @@ const store = () =>
           route: '/fun',
         },
       ],
+      items: {
+        query: {
+          results: {
+            item: [],
+          },
+        },
+      },
     },
     getters: {
       items: state => state.items.query.results.item,
