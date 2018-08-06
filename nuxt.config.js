@@ -38,4 +38,16 @@ module.exports = {
     },
   },
   css: ['@/assets/main.scss', 'font-awesome/scss/font-awesome.scss'],
+  generate: {
+    routes: [
+      '/social',
+      '/economics',
+      '/life',
+      '/knowledge',
+      '/it',
+      '/entertainment',
+      '/game',
+      '/fun',
+    ],
+  },
 };
