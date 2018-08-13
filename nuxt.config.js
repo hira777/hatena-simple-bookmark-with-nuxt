@@ -14,7 +14,11 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   loading: '~/components/Loading.vue',
-  modules: ['@nuxtjs/axios', ['@nuxtjs/moment', ['ja']]],
+  modules: [
+    '@nuxtjs/axios',
+    ['@nuxtjs/moment', ['ja']],
+    '~/modules/typescript',
+  ],
   router: {
     linkExactActiveClass: 'is-active',
   },
