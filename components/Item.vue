@@ -1,27 +1,13 @@
 <template lang="pug">
   article.post
-    .columns.level
-      .column.is-11.level-item
-        h2.post-title.is-size-5.is-size-6-mobile
-          a(:href="item.link", target="_blank", rel="noopener noreferrer") {{ item.title }}
-        slot(name="media")
-      .column.is-1.level-item
-        .level-item.has-text-centered
-          div
-            p.heading.is-size-7-mobile Users
-            p.title.is-size-4.is-size-7-mobile
-              a.has-text-danger(:href="item | createBookmarkEntry", target="_blank", rel="noopener noreferrer") {{ item.bookmarkcount }}
+    h2.post-title.is-size-6.is-size-6-mobile
+      a(:href="item.link", target="_blank", rel="noopener noreferrer") {{ item.title }}
+    slot(name="media")
 </template>
 
 <script>
 export default {
   name: 'Item',
-
-  filters: {
-    createBookmarkEntry(item) {
-      return `//b.hatena.ne.jp/entry/${item.link}`;
-    },
-  },
 
   props: {
     item: {

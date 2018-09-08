@@ -4,15 +4,19 @@
       p.image.is-96x96(v-html="itemImage")
     .media-content
       .content
-        p
-          small {{ date }}
-          br
-          | {{ content }}
+        a.has-text-danger(:href="item | createBookmarkEntry", target="_blank", rel="noopener noreferrer") {{ item.bookmarkcount }} users 
+        p {{ content }}
 </template>
 
 <script>
 export default {
   name: 'Media',
+
+  filters: {
+    createBookmarkEntry(item) {
+      return `//b.hatena.ne.jp/entry/${item.link}`;
+    },
+  },
 
   props: {
     item: {
@@ -22,9 +26,9 @@ export default {
   },
 
   computed: {
-    date() {
-      return this.$moment(this.item.date).format('YYYY/MM/DD HH:mm');
-    },
+    // date() {
+    //   return this.$moment(this.item.date).format('YYYY/MM/DD HH:mm');
+    // },
     content() {
       return this.item.description;
     },
@@ -43,6 +47,13 @@ export default {
 
 <style lang="scss" scoped>
 .content {
+  a {
+    font-size: 0.8rem;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   p {
     font-size: 0.8rem;
     color: #000;
