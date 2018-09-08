@@ -6,7 +6,7 @@ const store = () =>
       feed: 'http://b.hatena.ne.jp/',
       endPoint: 'https://query.yahooapis.com/v1/public/yql',
       siteTitle: 'Hatena::SimpleBookmark',
-      navItems: [
+      tabsItems: [
         {
           name: '世の中',
           route: '/social',
@@ -50,7 +50,7 @@ const store = () =>
     },
     getters: {
       items: state => state.items.query.results.item,
-      navItems: state => state.navItems,
+      tabsItems: state => state.tabsItems,
       siteTitle: state => state.siteTitle,
     },
     mutations: {

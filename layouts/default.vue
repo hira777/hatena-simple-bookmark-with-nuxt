@@ -1,6 +1,7 @@
 <template lang="pug">
   div
-    Nav(:title="siteTitle", :items="navItems")
+    Nav(:title="siteTitle")
+    Tabs(:items="tabsItems")
     main
       section.section
         .container
@@ -11,13 +12,21 @@
 <script>
 import { mapGetters } from 'vuex';
 import Nav from '~/components/Nav';
+import Tabs from '~/components/Tabs';
 
 export default {
   components: {
     Nav,
+    Tabs,
   },
   computed: {
-    ...mapGetters(['siteTitle', 'navItems']),
+    ...mapGetters(['siteTitle', 'tabsItems']),
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.section {
+  padding-top: 0;
+}
+</style>
